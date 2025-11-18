@@ -6,7 +6,7 @@ const path = require('path');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
-const inventoryFilePath = path.join(__dirname, '..', 'inventory.json');
+const inventoryFilePath = path.join(__dirname, 'inventory.json');
 
 app.use(express.json());
 
@@ -18,7 +18,7 @@ app.use((req, res, next) => {
   next();
 });
 
-app.use(express.static(path.join(__dirname, "..")));
+app.use(express.static(__dirname));
 
 //listen for express updates
 app.listen(PORT, ()=>{
