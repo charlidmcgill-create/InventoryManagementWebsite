@@ -1,0 +1,169 @@
+button{
+    background-color: #FA4616;
+}
+h1{
+    color: #FA4616;
+    font-family:Arial, Helvetica, sans-serif;
+}
+#submissionBox{
+        display: block;
+        background: linear-gradient(180deg, #FFFFFF 0%, #CCCCCC 100%); /* pleasant orange */
+        border: 1px solid #CCCCCC;
+        padding: 16px;
+        border-radius: 8px;
+        max-width: 420px;
+        box-shadow: 0 2px 6px rgba(0,0,0,0);
+}
+
+/* Stack each label/input/button on its own line inside the submission box */
+#submissionBox label,
+#submissionBox input,
+#submissionBox button {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 6px 0;
+}
+
+/* Make inputs visually distinct */
+#submissionBox input {
+    padding: 8px 10px;
+    border: 1px solid rgba(0,0,0,0.12);
+    border-radius: 4px;
+    background: #FFFFFF;
+}
+
+/* Buttons styling inside submission box */
+#submissionBox button {
+    padding: 8px 12px;
+    background-color: #FA4616;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#submissionBox button:hover {
+    background-color: #FA4616;
+}
+
+/* Responsive behavior: full-width on small screens, center and show
+     action buttons side-by-side on wider screens */
+@media (max-width: 599px) {
+    #submissionBox {
+        width: calc(100% - 32px);
+        margin: 12px;
+    }
+    /* keep everything stacked on small screens */
+    #submissionBox label,
+    #submissionBox input,
+    #submissionBox button {
+        display: block;
+        width: 100%;
+    }
+}
+
+@media (min-width: 600px) {
+    #submissionBox {
+        width: 100%;
+        max-width: 520px; /* allow slightly wider on larger screens */
+        margin: 16px auto;
+        padding: 20px;
+    }
+
+    /* Make buttons appear side-by-side while inputs remain full-width */
+    #submissionBox label,
+    #submissionBox input {
+        display: block;
+        width: 100%;
+    }
+
+    /* Two buttons side-by-side: each takes roughly half the box width */
+    #submissionBox button {
+        display: inline-block;
+        width: calc(50% - 6px);
+        margin: 6px 3px; /* small gap between buttons */
+        box-sizing: border-box;
+    }
+
+    /* Ensure buttons align on the same row */
+    #submissionBox button:first-of-type { margin-left: 0; }
+    #submissionBox button:last-of-type { margin-right: 0; }
+}
+table{
+    width: 80%;
+}
+/* Table cell borders and spacing */
+table {
+    border-collapse: collapse; /* merge adjacent borders */
+    border: 1px solid #CCCCCC;   /* outer border */
+    margin-top: 12px;
+    margin-bottom: 24px; /* add extra space between table and following content (nav/list) */
+}
+
+table th,
+table td {
+    border: 1px solid #CCCCCC;   /* cell borders */
+    padding: 8px 12px;
+    text-align: left;
+}
+
+table tr:nth-child(even) {
+    background-color: #FFFFFF; /* zebra striping for readability */
+}
+
+table th {
+    background-color: #FFFFFF;
+    font-weight: 600;
+}
+
+/* Make navigation headings smaller and muted */
+nav#nav-heading, nav h2, #nav-heading {
+    /* slightly larger than normal link text for better emphasis */
+    font-size: 1.05rem; /* very small increase over 1rem */
+    margin: 0 0 6px 0;
+    color: #000000; /* darker for better contrast */
+    font-weight: 600;
+}
+/* Loading keyframe and button loading state
+     - The keyframe animates a spinner (pseudo-element) rotating once over 5s
+     - The .loading class disables the button and shows the spinner
+*/
+@keyframes spinOnce {
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(360deg); }
+}
+
+button.loading {
+    position: relative;
+    pointer-events: none; /* prevent additional clicks while loading */
+    opacity: 0.9;
+}
+
+/* spinner using a pseudo-element so the button text remains visible */
+button.loading::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 12px;
+    width: 16px;
+    height: 16px;
+    margin-top: -8px;
+    border: 2px solid rgba(255,255,255,0.9);
+    border-left-color: transparent;
+    border-radius: 50%;
+    animation-name: spinOnce;
+    animation-duration: 3s; /* total animation time: 3s */
+    animation-timing-function: linear;
+    animation-iteration-count: 1; /* run once for 3s */
+}
+
+/* small tweak for button visuals while loading */
+button.loading span.button-text {
+    opacity: 0.9;
+}
+
+/* status messages inserted by updateInventory.js */
+#statusMessage {
+    font-size: 0.95rem;
+}

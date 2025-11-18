@@ -1,0 +1,16 @@
+{
+  "name": "inventorywebsite",
+  "version": "1.0.0",
+  "description": "Inventory management website",
+  "main": "API/server.js",
+  "dependencies": {
+    "express": "^5.1.0"
+  },
+  "scripts": {
+    "start": "node API/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Charli McGill",
+  "license": "ISC"
+}

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Inventory</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <h1>Update Inventory</h1>
+    <span id = "submissionBox">
+        <label for="date">Date</label>
+        <input type = "date" id = "date" name="date" required>
+        <label for = "itemName">Item Name</label>
+        <input type = "text" id = "itemName" name = "itemName" placeholder = "Type item name here" required>
+        <label for = "itemQuantity">Item Quantity</label>
+        <input type ="number" id = "quantity" name = "itemQuantity" placeholder="Enter quantity" required>
+        
+        <button id = "addButton" data-action = "add">Add</button>
+        <button id = "subtractButton" data-action = "subtract">Subtract</button>
+    </span>
+    <nav aria-labelledby="nav-heading">
+        <h2 id="nav-heading">Navigation</h2>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="currentInventory.html">View Current Inventory</a></li>
+        </ul>
+    </nav>
+
+    <script src = "updateInventory.js"></script>
+
+</body>
+</html>

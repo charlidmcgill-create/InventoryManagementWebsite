@@ -1,0 +1,22 @@
+[
+  {
+    "itemName": "Apples",
+    "date": "2025-11-06",
+    "quantity": 2
+  },
+  {
+    "itemName": "FOOD2",
+    "date": "2002-12-03",
+    "quantity": 23
+  },
+  {
+    "itemName": "rice",
+    "date": "2025-11-03",
+    "quantity": 10
+  },
+  {
+    "itemName": "Melon",
+    "date": "2025-11-12",
+    "quantity": 12
+  }
+]
