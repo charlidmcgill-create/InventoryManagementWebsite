@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     //send GET request
     const xhr = new XMLHttpRequest();
-    xhr.open("GET", "http://localhost:3000/getInventory", true);
+    xhr.open("GET", "https://inventorymanagementwebsiteserver.onrender.com/getInventory", true);
     xhr.setRequestHeader("Content-Type", "application/json");
 
     xhr.onload = function(){
