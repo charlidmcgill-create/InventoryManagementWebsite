@@ -78,7 +78,7 @@ function add(){
     const addBtn = document.getElementById('addButton');
     const loader = animateButton(addBtn, 3000);
     const xhr = new XMLHttpRequest();
-    xhr.open("POST", "http://localhost:3000/add", true);
+    xhr.open("POST", "https://inventorymanagementwebsiteserver.onrender.com/add", true);
     xhr.setRequestHeader("Content-Type", "application/json");
 
     // Hold handling until both server responded and min animation time elapsed.
@@ -125,7 +125,7 @@ function subtract(){
     const subBtn = document.getElementById('subtractButton');
     const loader = animateButton(subBtn, 3000);
     const xhr = new XMLHttpRequest();
-    xhr.open("POST", "http://localhost:3000/subtract", true);
+    xhr.open("POST", "https://inventorymanagementwebsiteserver.onrender.com/subtract", true);
     xhr.setRequestHeader("Content-Type", "application/json");
 
     // Hold handling until both server responded and min animation time elapsed.
